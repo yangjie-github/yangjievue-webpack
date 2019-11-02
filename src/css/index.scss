@@ -1,0 +1,26 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    
+
+    li {
+        font-size: 12px;
+        height: 30px;
+    }
+
+    .box {
+        width: 220px;
+        height: 120px;
+        // 默认webpack处理不了csswe年中的地址，无论是文件和字体库，只要是url都处理不了， 需要装loader: cnpm i url-loader file-loader@2.0.0 -D; url-loader回依赖file-loader;
+        background: url('../images/播放背景.png');
+        background-size: cover;
+    }
+
+    .box2 {
+        width: 220px;
+        height: 120px;
+        // 默认webpack处理不了csswe年中的地址，无论是文件和字体库，只要是url都处理不了， 需要装loader: cnpm i url-loader file-loader@2.0.0 -D; url-loader回依赖file-loader;
+        background: url('../images2/播放背景.png');
+        background-size: cover;
+    }
+}

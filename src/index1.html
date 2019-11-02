@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- 传统方式的html,没有整合webpack -->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 若需要引入jquery,不推荐在这里引用任何js和css文件， 都写入main.js -->
+    <!-- 使用webpack处理了main.js -->
+    <!-- <script src="./main.js"></script> -->
+
+    <!-- 引入处理后的bundle.js， 这个是物理磁盘上的bundle.js, 不是内存中的 -->
+    <!-- <script src="../disk/bundle.js"></script> -->
+    <!-- 在使用web-dev-server之后 ， 会在内存中生成一个bundle.js文件， 此时页面不在引入物理磁盘上的bundle.js-->
+    <!-- 当我们使用html-webpack-plugin之后， 我们不需要在手动处理bundle.js文件的引用了，因为这个插件自动帮我们引用，并会追加在html页面后面 -->
+    <!-- <script src="/bundle.js"></script> -->
+
+    <!-- 引入css, 不推荐这样做，因为这样会发起二次请求 -->
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+
+    <!-- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css"> -->
+
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li>这是第1个li</li>
+            <li>这是第2个li</li>
+            <li>这是第3个li</li>
+            <li>这是第4个li</li>
+            <li>这是第5个li</li>
+            <li>这是第6个li</li>
+            <li>这是第7个li</li>
+            <li>这是第8个li</li>
+            <li>这是第9个li</li>
+            <li>这是第10个li</li>
+        </ul>
+
+        <div class="box">
+
+        </div>
+        <p>================================================</p>
+        <!-- 需要安装bootstrap: cnpm i bootstrap@3.3.7 -D, 需要配置字体文件 -->
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        
+    
+        <p>===================================================</p>
+        <div class="box2">
+    
+        </div>
+    </div>
+</body>
+</html>

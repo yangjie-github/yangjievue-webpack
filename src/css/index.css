@@ -1,0 +1,8 @@
+li {
+    list-style: none;
+}
+
+.mytoast i {
+    /* !important 设置权重 */
+    color: red !important; 
+}

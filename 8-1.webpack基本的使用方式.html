@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/Vue.js v2.6.10.js"></script>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div id="app">
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {},
+            methods: {}
+        });
+    </script>
+</body>
+</html>
+<!-- 
+    以前在网页中会引入资源： 
+        js: .js,.jsx,.coffee,.ts(type script)
+        css: .css,.less,.scss,
+        images: .jpg,.gif,.bmp,.svg
+        fonts(字体文件): .svg,.woff,.ttf,.eot
+        模板文件：.ejs,.jade,.vue(webpack推荐)
+
+    ========================================
+
+    问题：
+        加载的速度慢，需要发起二次请求
+        需要处理包的依赖关系
+
+    =====================================
+
+    解决办法： 
+        合并，压缩，图片base64编码， 
+        使用requireJS, 或者webpack可以解决包之间的依赖关系
+
+    ====================================
+
+    webpack是前端的一个项目构建工具，基于node.js开发的；
+
+    ===================================
+
+    gulp和webpack功能类似：
+    gulp: 基于task任务， 点的方式
+    webpack：基于整个项目, 宏观角度
+
+    =========================================
+
+    安装webpack:
+        方式一： 全局安装：npm i webpack -g， 指定版本：npm install  webpack@3.4.1  -g
+        卸载： npm  uninstall  webpack  -g
+
+        本地安装：npm i webpack@3.4.1 -D(推荐)
+
+    ============================================
+ -->
