@@ -1,8 +1,9 @@
 // 这是项目的js入口文件
 
 //导入jquery, import是es6导入模块的方式；
-//由于浏览器解析不了es6语法, 
-//在项目的根目录执行命令：webpack .\src\main.js .\disk\bundle.js, 将不能识别的es6语法的main.js文件交给webpack来处理， 并放在disk文件夹下，名字为bundle.js
+//由于浏览器解析不了es6语法,
+//在项目的根目录执行命令：webpack .\src\main.js -o .\disk\bundle.js, 将不能识别的es6语法的main.js文件交给webpack来处理， 并放在disk文件夹下，名字为bundle.js
+//-o是在webpack4.X版本以上要加
 
 //werbpack：
 //          可以处理js文件之间的互相依赖关系
@@ -10,7 +11,7 @@
 import $ from 'jquery'
 
 //引入css, webpack只能处理js文件，其他的文件处理不了；如果需要处理非js的文件，需要安装第三方的loader加载器
-//处理css, 
+//处理css,
 //       1.需要安装： npm i style-loader css-loader -D,
 //       2.在package.config.js配置文件中，新增一个配置节点moudule， 它是一个对象，在这个对象身上有个rule属性的数组，里面存放了第三方的处理规则；
 import './css/index.css'
@@ -40,7 +41,7 @@ $(function() {
 
 
 //webpack只能处理一部分es6语法， 这时候需要解除第三方的loader来处理， 将高级语法转为低级语法， 结果会打包到bundle.js中；
-// 1.安装Babel, 需要安装两套包： 
+// 1.安装Babel, 需要安装两套包：
 //                          npm i babel-core babel-loader babel-plugin-transform-runtime -D // babel的转换工具
 //                          npm i babel-preset-env babel-preset-stage-0 -D //babe高级和低级的对应关系
 //                                                                         //babel-preset-env是比较新的语法(包含了所有的es***语法)， 之前的是babel-preset-es2015
@@ -63,9 +64,9 @@ var p1 = new Person();
 //在普通网页中使用vue: 1. 先引入vue包  2. 在index中创建一个id为app的div容器 3. 通过new得到一个vm实例
 //webpack整合： 1. npm i vue -S; 安装vue包为项目运行依赖
 //import Vue from 'vue'; //这个导入的包没有以前导入的包功能全， 此功能不完整， 这个文件是从以下查找规则中查找到的
-//包的查找规则： 1.在项目根目录node_modules中查找 
-//              2. 在node_modules中查找对应的vue文件夹 
-//              3. 在vue文件中找package.josn的配置文件 
+//包的查找规则： 1.在项目根目录node_modules中查找
+//              2. 在node_modules中查找对应的vue文件夹
+//              3. 在vue文件中找package.josn的配置文件
 //              4. 在文件中查找main属性，指定了这个包被加载时候的入口文件
 
 // 第一种导入完整的vue
@@ -73,7 +74,7 @@ var p1 = new Person();
 //第二中导入方式， 在package.config.js中加一个resolve节点：
 import Vue from 'vue'
 
-// 导入vue定义的login组件， 还需要安装第三方loader: npm i vue-loader vue-template-compiler -D ; 
+// 导入vue定义的login组件， 还需要安装第三方loader: npm i vue-loader vue-template-compiler -D ;
 //在配置文件中新增配置项, 需要在plugins节点中添加：new VueLoaderPlugin(),并加入const VueLoaderPlugin = require('vue-loader/lib/plugin');
 // import login from './login.vue'
 
@@ -119,7 +120,7 @@ var vm = new Vue({
     //简写, 引入login组件
     render: c => c(App),
     router//将路由对象挂载到vm上
-    
+
 })
 // webpack使用vue总结：
 // 1. 安装vue包： npm i vue -S
