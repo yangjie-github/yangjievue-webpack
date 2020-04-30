@@ -4,7 +4,7 @@
   "description": "{**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}",
   "main": "webpack.config.js",
   "dependencies": {
-    "jquery": "^3.4.0",
+    "jquery": "^3.5.0",
     "mint-ui": "^2.2.13",
     "vue": "^2.6.10",
     "vue-router": "^3.0.6",
